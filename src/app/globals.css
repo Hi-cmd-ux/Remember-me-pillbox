@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --background: #08111f;
+  --foreground: #f8fafc;
+  --surface: #101d2d;
+  --surface-raised: #142338;
+  --line: #263852;
+  --primary: #19b7d4;
+  --primary-hover: #47cde2;
+  --accent: #8ed1a8;
+  --muted: #8fa1b8;
+  --radius: 0.5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 80% -10%, rgba(25, 183, 212, 0.09), transparent 32rem),
+    linear-gradient(135deg, #08111f 0%, #0b1626 52%, #0a1422 100%);
+}
+
+.app-content {
+  margin-left: 15rem;
+}
+
+.app-main {
+  min-height: calc(100vh - 4rem);
+  padding: 5.5rem 2.5rem 2.5rem;
+}
+
+/* Minimal Crisp Card */
+.clean-card {
+  background: rgba(16, 29, 45, 0.94);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clean-card:hover {
+  border-color: #3b5574;
+}
+
+.glass-panel {
+  background: rgba(16, 29, 45, 0.82);
+  border: 1px solid rgba(38, 56, 82, 0.9);
+  border-radius: var(--radius);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
